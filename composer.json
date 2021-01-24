@@ -1,7 +1,7 @@
 {
-    "name": "pdik/Pdik",
+    "name": "pdik/pdik",
     "type": "project",
-    "description": "Pdik application",
+    "description": "pdik application",
     "keywords": [
         "framework",
         "laravel"
