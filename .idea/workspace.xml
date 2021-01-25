@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1599c55-130d-4c6f-93e4-c98750c121fd" name="Default Changelist" comment="Changes composer.json">
-      <change afterPath="$PROJECT_DIR$/resources/views/Layouts/Navbar/sidebar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Layouts/app.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Layouts/guest.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="e1599c55-130d-4c6f-93e4-c98750c121fd" name="Default Changelist" comment="Updated Readme.md, And 3 blade templates,&#10;Updated composer.json">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +227,7 @@
       <workItem from="1611504497604" duration="4896000" />
       <workItem from="1611509443778" duration="1155000" />
       <workItem from="1611511940302" duration="3355000" />
-      <workItem from="1611571006141" duration="422000" />
+      <workItem from="1611571006141" duration="1117000" />
     </task>
     <task id="LOCAL-00001" summary="Project startup">
       <created>1611501193998</created>
@@ -272,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611512774722</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Updated Readme.md, And 3 blade templates,&#10;Updated composer.json">
+      <created>1611571489819</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1611571489819</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,6 +306,7 @@
     <MESSAGE value="Test" />
     <MESSAGE value="Added Docker" />
     <MESSAGE value="Changes composer.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes composer.json" />
+    <MESSAGE value="Updated Readme.md, And 3 blade templates,&#10;Updated composer.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Readme.md, And 3 blade templates,&#10;Updated composer.json" />
   </component>
 </project>
