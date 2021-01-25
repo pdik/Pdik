@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1599c55-130d-4c6f-93e4-c98750c121fd" name="Default Changelist" comment="Updated Readme.md, And 3 blade templates,&#10;Updated composer.json">
+    <list default="true" id="e1599c55-130d-4c6f-93e4-c98750c121fd" name="Default Changelist" comment="Readme update">
+      <change afterPath="$PROJECT_DIR$/app/Models/Tentant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Providers/TenancyServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/tenancy.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,12 +159,15 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1nWLmsUCmPpfhJt2UlFezzp7tes" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
@@ -173,6 +179,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -227,7 +234,7 @@
       <workItem from="1611504497604" duration="4896000" />
       <workItem from="1611509443778" duration="1155000" />
       <workItem from="1611511940302" duration="3355000" />
-      <workItem from="1611571006141" duration="1117000" />
+      <workItem from="1611571006141" duration="2298000" />
     </task>
     <task id="LOCAL-00001" summary="Project startup">
       <created>1611501193998</created>
@@ -271,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611571489819</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Readme update">
+      <created>1611573538416</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1611573538416</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,11 +316,13 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Project startup" />
     <MESSAGE value="Test" />
     <MESSAGE value="Added Docker" />
     <MESSAGE value="Changes composer.json" />
     <MESSAGE value="Updated Readme.md, And 3 blade templates,&#10;Updated composer.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Readme.md, And 3 blade templates,&#10;Updated composer.json" />
+    <MESSAGE value="Readme update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Readme update" />
   </component>
 </project>
