@@ -22,13 +22,8 @@ services:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: Knoflook100!
-  redis:
-    container_name: pdik-redis
-    image: redis
-    ports:
-      - "6382:6379"
-  metabase:
-    container_name: pdik-metabase
-    image: metabase/metabase
-    ports:
-      - "3000:3000"
+      MYSQL_DATABASE: saas
+      MYSQL_USER: saas
+      MYSQL_PASSWORD: Knoflook100
+
+
