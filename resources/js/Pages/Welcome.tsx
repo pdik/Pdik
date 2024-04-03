@@ -15,12 +15,8 @@ import Guest from "@/Layouts/GuestLayout";
             <Head title="Welcome" />
             <div>
                 <Hero/>
-                <div className="flex bg-gray-100 w-full">
-
-                     <div className="">
-                         <HowItWorks/>
-                     </div>
-                    <div className="">
+                <div className="bg-gray-100 w-full">
+                    <div className="w-full">
                         <WorkedWith/>
                     </div>
                 </div>
