@@ -1,10 +1,10 @@
 import React from "react";
 export default function WorkedWith() {
     return (
-        <div className="container mx-auto pt-16">
+        <div className="container mx-auto pt-16 bg-dark rounded-2xl">
             <div className="w-12/12 xl:w-2/3 lg:w-2/3 md:w-2/3 mx-auto sm:mb-10 mb-16">
-                <h1 className=" xl:text-5xl md:text-3xl text-xl text-center text-darkBlue font-extrabold mb-5 pt-4">Bedrijven waarmee ik heb gewerkt</h1>
-                <p className="text-base md:text-lg lg:text-xl text-center text-gray-600 font-normal xl:w-10/12 xl:mx-auto">We zijn trots op de spannende reis die we hebben gemaakt met een aantal geweldige bedrijven. Samen hebben we digitale magie gecreëerd! Met onze focus op op maat gemaakte softwareoplossingen voor web en mobiel, hebben we de processen van onze partners naar nieuwe hoogten getild. Dank aan al onze geweldige samenwerkingspartners voor het delen van dit avontuur met ons!</p>
+                <h1 className=" xl:text-5xl md:text-3xl text-xl text-center text-white font-extrabold mb-5 pt-4">Bedrijven waarmee ik heb gewerkt</h1>
+                <p className="text-base md:text-lg lg:text-xl text-center text-slate-300 font-normal xl:w-10/12 xl:mx-auto">Ik ben trots op de spannende reis die ik heb gemaakt met een aantal geweldige bedrijven. Samen hebben we digitale magie gecreëerd! Met mijn focus op op maat gemaakte softwareoplossingen voor web en mobiel, hebben we de processen van onze partners naar nieuwe hoogten getild. Dank aan al onze geweldige samenwerkingspartners voor het delen van dit avontuur met ons!</p>
             </div>
             <div className="xl:py-16 lg:py-16 md:py-16 sm:py-16 px-6 flex flex-wrap gap-4">
                 <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r :border-r border-white xl:pb-10 pb-16 items-center">
