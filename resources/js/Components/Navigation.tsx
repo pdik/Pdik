@@ -8,7 +8,9 @@ export default function Navigation() {
         <nav className="w-full border-b">
             <div className="py-5 md:py-0 container mx-auto px-6 flex items-center justify-between">
                 <div aria-label="Home. logo" role="img">
-                    <img className="w-1/6 md:w-1/4" src={logo} alt="logo"/>
+                    <Link href={route('welcome')}>
+                        <img className="w-1/6 md:w-1/4" src={logo} alt="logo"/>
+                    </Link>
                 </div>
                 <div>
                     <button onClick={() => setShow(!show)}
@@ -51,8 +53,8 @@ export default function Navigation() {
                         </ul>
                     </div>
                 </div>
-                <Link href={route('login')}
-                      className="focus:outline-none lg:text-lg lg:font-bold focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 hidden md:block bg-transparent transition duration-150 ease-in-out hover:bg-dark rounded border border-lightGrey text-primary px-4 sm:px-8 py-1 sm:py-3 text-sm">Login</Link>
+                {/*<Link href={route('login')}*/}
+                {/*      className="focus:outline-none lg:text-lg lg:font-bold focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 hidden md:block bg-transparent transition duration-150 ease-in-out hover:bg-dark rounded border border-lightGrey text-primary px-4 sm:px-8 py-1 sm:py-3 text-sm">Login</Link>*/}
             </div>
         </nav>
     );
