@@ -17,12 +17,15 @@ class ProjectData extends Data
         public string $name,
         public string $description,
         public string $owner,
-        public string $link,
-        public string $icon,
+        public ?string $link,
+        public ?string $icon,
         public bool $complete,
         public bool $private,
+        public array $data,
         public DateTime|Optional $created_at,
         public DateTime|Optional $updated_at,
+        public DateTime|Optional $started_at,
+        public DateTime|Optional $completed_at,
         #[DataCollectionOf(TagableData::class)]
         public DataCollection|Optional $tags,
     ) {}

@@ -8,6 +8,7 @@
         "php": "^8.2",
         "diglactic/laravel-breadcrumbs": "^9.0",
         "filament/filament": "^3.0",
+        "filament/spatie-laravel-tags-plugin": "^3.2",
         "inertiajs/inertia-laravel": "^1.0",
         "laravel/framework": "^11.0",
         "laravel/sanctum": "^4.0",
@@ -15,7 +16,7 @@
         "spatie/laravel-data": "^4.4",
         "spatie/laravel-tags": "^4.6",
         "spatie/laravel-typescript-transformer": "^2.4",
-        "spatie/typescript-transformer": "^2.3",
+        "spatie/typescript-transformer": "^2.4",
         "tightenco/ziggy": "^2.0"
     },
     "require-dev": {
@@ -48,8 +49,7 @@
             "@php artisan filament:upgrade"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
-            "@php artisan filament:upgrade"
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""

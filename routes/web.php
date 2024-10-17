@@ -13,7 +13,17 @@ Route::get('/', function () {
     ]);
 })->name('welcome');
 
-Route::resource('/cases', \App\Http\Controllers\ProjectController::class);
+Route::resource('cases', \App\Http\Controllers\ProjectController::class,[
+    'names' => [
+        'index' => 'cases.index',
+        'create' => 'cases.create',
+        'store' => 'cases.store',
+        'show' => 'cases.show',
+        'edit' => 'cases.edit',
+        'update' => 'cases.update',
+        'destroy' => 'cases.destroy',
+    ]
+]);
 Route::get('/jouw-applicatie',function (){
     return Inertia::render('JouwApplicatie');
 });

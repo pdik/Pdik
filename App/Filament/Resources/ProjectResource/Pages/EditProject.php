@@ -16,4 +16,13 @@ class EditProject extends EditRecord
             Actions\DeleteAction::make(),
         ];
     }
+    protected function mutateFormDataBeforeSave(array $data): array
+    {
+        $data['slug'] = \Str::slug($data['name']);
+
+        if(isset($data['complete']) && $data['complete'] === true){
+            $data['completed_at'] = now();
+        }
+        return $data;
+    }
 }

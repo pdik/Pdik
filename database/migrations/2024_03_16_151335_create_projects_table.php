@@ -22,8 +22,8 @@ return new class extends Migration
             $table->text('link')->nullable();
             $table->text('icon')->nullable();
             $table->boolean('complete')->default(0);
-            $table->dateTime('started_at')->nullable();
-            $table->dateTime('completed_at')->nullable();
+            $table->date('started_at')->nullable();
+            $table->date('completed_at')->nullable();
 
             $table->boolean('private')->default(1);
             $table->timestamps();
