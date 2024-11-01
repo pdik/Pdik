@@ -1,47 +1,95 @@
-.slider {
-    width: 100%;
-    height: 630px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-}
-/*.slide-ana {*/
-/*    height: 100%;*/
-/*}*/
-/*.slide-ana > div {*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    position: absolute;*/
-/*    transition: all 1s;*/
-/*}*/
 
-
-
-.swiper {
-    width: 100%;
-    height: 100%;
+.swiper-wrapper{
+    padding-bottom: 3rem;
 }
 
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.fade{
+    margin-left: initial !important;
+    margin-right: initial !important;
 }
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.fade .swiper-button-next::after,
+.fade .swiper-button-prev::after{
+    content: '';
 }
 
-.swiper {
-    width: 100%;
-    height: 300px;
-    margin: 20px auto;
+.fade .swiper-button-prev::before{
+    content: '>';
+    font-size: 32px;
 }
+
+.fade .swiper-button-next::before{
+    content: '<';
+    font-size: 32px;
+}
+
+.fade .swiper-button-prev,
+.fade .swiper-button-next {
+    position: absolute;
+    top: initial;
+    bottom: 0;
+    color: white;
+}
+
+/* fade */
+
+.fade .swiper-button-prev,
+.fade .swiper-button-next {
+    background-color: cadetblue;
+}
+
+.fade .swiper-button-next {
+    left: initial;
+    width: 3rem;
+    height: 3rem;
+    background-color: #F59E0B;
+    right: 6rem;
+}
+
+.fade .swiper-button-prev {
+    right: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: #F59E0B;
+    left: initial;
+}
+
+.fade .swiper-pagination {
+    position: absolute;
+    bottom: initial;
+    left: initial;
+    top: 0;
+    right: 1.5rem;
+    width: initial;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+}
+
+.fade .date,
+.fade .title,
+.fade .btn {
+    opacity: 0;
+}
+
+.fade .swiper-slide-active .date {
+    opacity: 1;
+    animation: fadeIn 0.4s cubic-bezier(0.54, 1.3, 0.63, 1.34) 0.3s backwards;
+}
+
+.fade .swiper-slide-active .title {
+    opacity: 1;
+    animation: fadeIn 0.4s cubic-bezier(0.64, 1.3, 0.63, 1.34) 0.5s backwards;
+}
+
+.fade .swiper-slide-active .btn {
+    opacity: 1;
+    animation: fadeIn 0.4s cubic-bezier(0.54, 1.3, 0.63, 1.34) 0.7s backwards;
+}
+
+

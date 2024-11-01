@@ -2,7 +2,10 @@
 
 namespace App\Data;
 
+use App\Models\Project;
 use DateTime;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Storage;
 use Spatie\LaravelData\Attributes\DataCollectionOf;
 use Spatie\LaravelData\Data;
 use Spatie\LaravelData\DataCollection;
@@ -22,14 +25,35 @@ class ProjectData extends Data
         public bool $complete,
         public bool $private,
         public array $data,
+        public ?string $image,
         public DateTime|Optional $created_at,
         public DateTime|Optional $updated_at,
         public DateTime|Optional $started_at,
-        public DateTime|Optional $completed_at,
-        #[DataCollectionOf(TagableData::class)]
-        public DataCollection|Optional $tags,
+        public DateTime|Optional|null $completed_at,
+        public Collection $tags,
     ) {}
 
+    public static function fromModel(Project $project): self
+    {
+
+        return new self(
+            $project->id,
+            $project->name,
+            $project->description,
+            $project->owner,
+            $project->link,
+            $project->icon,
+            $project->complete,
+            $project->private,
+            $project->data,
+            $project->image != null ? Storage::drive('projects')->url($project->image) : null,
+            $project->created_at,
+            $project->updated_at,
+            $project->started_at,
+            $project->completed_at,
+            TagableData::collect($project->tags),
+        );
+    }
     public static function rules(): array
     {
         return [

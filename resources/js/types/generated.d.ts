@@ -9,6 +9,7 @@ icon: string | null;
 complete: boolean;
 private: boolean;
 data: Array<any>;
+image: string;
 created_at: string | any;
 updated_at: string | any;
 started_at: string | any;

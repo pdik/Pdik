@@ -43,6 +43,11 @@ class ProjectResource extends Resource
                             Components\MarkdownEditor::make('description')
                                 ->label(__('fields.description')),
                             Components\FileUpload::make('image')
+                                ->image()
+                                ->imageEditor()
+                                ->disk('local')
+                                ->directory('projects')
+                                ->visibility('public')
                                 ->label(__('fields.image')),
                             Components\TextInput::make('link')
                                 ->label(__('fields.link'))
