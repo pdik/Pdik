@@ -41,8 +41,12 @@ class AdminPanelProvider extends PanelProvider
                         ->useThemeManager()
                         ->usePageBuilder(),
                     \Filament\SpatieLaravelTranslatablePlugin::make()->defaultLocales(['en', 'nl']),
-                    \TomatoPHP\FilamentMenus\FilamentMenusPlugin::make()
-                    ,
+                    \TomatoPHP\FilamentMenus\FilamentMenusPlugin::make(),
+                    \TomatoPHP\FilamentSeo\FilamentSeoPlugin::make()
+                        ->allowAutoPostsIndexing()
+                        ->postUrl('/blog')
+                        ->postSlug('slug')
+
 
                 ]
 
