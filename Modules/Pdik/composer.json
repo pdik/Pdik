@@ -1,0 +1,30 @@
+{
+    "name": "pdik/pdik",
+    "description": "",
+    "authors": [
+        {
+            "name": "Pepijn Dik",
+            "email": "pepijn@pdik.nl"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Pdik\\": "app/",
+            "Modules\\Pdik\\Database\\Factories\\": "database/factories/",
+            "Modules\\Pdik\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Pdik\\Tests\\": "tests/"
+        }
+    }
+}

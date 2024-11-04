@@ -2,8 +2,10 @@
 
 namespace App\Http\Middleware;
 
+use App\Data\MenuData;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
+use TomatoPHP\FilamentMenus\Models\Menu;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -34,6 +36,15 @@ class HandleInertiaRequests extends Middleware
             'auth' => [
                 'user' => $request->user(),
             ],
+            'menus'=> Menu::all()->map(function (Menu $menu) {
+                return new MenuData(
+                    key: $menu->key,
+                    location: $menu->location,
+                    title: $menu->title,
+                    items: $menu->menuItems,
+                    activated: $menu->activated,
+                );
+            })
         ];
     }
 }

@@ -1,0 +1,23 @@
+{
+    "name": "Pdik",
+    "alias": "pdik",
+    "description": {
+        "en": "Pdik systems site",
+        "nl": "Pdik systems site"
+    },
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Pdik\\Providers\\PdikServiceProvider"
+    ],
+    "files": [],
+    "title": {
+        "en": "pdik",
+        "nl": "pdik"
+    },
+    "placeholder": "placeholder.webp",
+    "type": "theme",
+    "color": "#F01E19",
+    "icon": "heroicon-s-swatch",
+    "version": "v1.0.0"
+}

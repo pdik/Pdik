@@ -1,9 +1,15 @@
 import logo from "../../assets/logo.png";
-import {Link} from "@inertiajs/react";
+import {Link, usePage} from "@inertiajs/react";
 import React, {useState} from "react";
+import DynamicHeroIcon from "@/Components/DynamicHeroIcon";
 
 export default function Navigation() {
     const [show, setShow] = useState(false);
+    const {menus} = usePage().props as any; // adjust type if needed
+    console.log(menus);
+    const menuItems = menus?.find((menu: any) => menu.location === "header")?.items || [];
+
+    console.log(menuItems);
     return (
         <nav className="w-full border-b">
             <div className="py-5 md:py-0 container mx-auto px-6 flex items-center justify-between">
@@ -35,21 +41,17 @@ export default function Navigation() {
                             </svg>
                         </button>
                         <ul className="flex text-3xl md:text-base items-center py-10 md:flex flex-col md:flex-row justify-center fixed md:relative top-0 bottom-0 left-0 right-0 bg-white md:bg-transparent z-20">
-                            <li className="text-gray-700 hover:text-gray-900 cursor-pointer text-base lg:text-lg pt-10 md:pt-0">
-                                <Link href={route('cases.index')}>Cases</Link>
-                            </li>
-                            <li className="text-gray-700 hover:text-gray-900 cursor-pointer text-base lg:text-lg pt-10 md:pt-0 md:ml-5 lg:ml-10">
-                                <Link href="">Oplossingen</Link>
-                            </li>
-                            <li className="text-gray-700 hover:text-gray-900 cursor-pointer text-base lg:text-lg pt-10 md:pt-0 md:ml-5 lg:ml-10">
-                                <Link href="">Api koppeling</Link>
-                            </li>
-                            <li className="text-gray-700 hover:text-gray-900 cursor-pointer text-base lg:text-lg pt-10 md:pt-0 md:ml-5 lg:ml-10">
-                                <Link href="">Over ons</Link>
-                            </li>
-                            <li className="text-gray-700 hover:text-gray-900 cursor-pointer text-base lg:text-lg pt-10 md:pt-0 md:ml-5 lg:ml-10">
-                                <Link href="">Contact</Link>
-                            </li>
+                            {menuItems.map((item: any) => (
+                                <li key={item.id} className="md:mx-4 my-2 md:my-0">
+                                    <Link
+                                        href={item.is_route ? route(item.route) : item.url}
+                                        target={item.new_tab ? "_blank" : "_self"}
+                                        className="text-gray-700 hover:text-primary transition duration-150"
+                                    >
+                                        {item.title.en} {/* Adjust for locale as needed */}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>

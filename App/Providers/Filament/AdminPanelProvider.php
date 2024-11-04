@@ -30,6 +30,24 @@ class AdminPanelProvider extends PanelProvider
             ->colors([
                 'primary' => Color::Amber,
             ])
+            ->plugins(
+                [
+                    \TomatoPHP\FilamentCms\FilamentCMSPlugin::make()
+                        ->defaultLocales(['en', 'nl'])
+                        ->useCategory()
+                        ->usePost()
+                        ->allowExport()
+                        ->allowImport()
+                        ->useThemeManager()
+                        ->usePageBuilder(),
+                    \Filament\SpatieLaravelTranslatablePlugin::make()->defaultLocales(['en', 'nl']),
+                    \TomatoPHP\FilamentMenus\FilamentMenusPlugin::make()
+                    ,
+
+                ]
+
+            )
+
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([

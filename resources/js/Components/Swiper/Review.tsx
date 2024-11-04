@@ -1,7 +1,4 @@
-import {App} from "@/types/generated";
 import ReviewData = App.Data.ReviewData;
-
-
 
 export default function Review(review: ReviewData) {
     return (
