@@ -40,6 +40,7 @@ class AdminPanelProvider extends PanelProvider
                         ->allowImport()
                         ->useThemeManager()
                         ->usePageBuilder(),
+
                     \Filament\SpatieLaravelTranslatablePlugin::make()->defaultLocales(['en', 'nl']),
                     \TomatoPHP\FilamentMenus\FilamentMenusPlugin::make(),
                     \TomatoPHP\FilamentSeo\FilamentSeoPlugin::make()

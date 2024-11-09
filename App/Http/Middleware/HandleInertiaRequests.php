@@ -44,7 +44,7 @@ class HandleInertiaRequests extends Middleware
                     items: $menu->menuItems,
                     activated: $menu->activated,
                 );
-            })
+            }) ?? []
         ];
     }
 }
