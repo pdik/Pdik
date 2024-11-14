@@ -41,10 +41,10 @@ class HandleInertiaRequests extends Middleware
                     key: $menu->key,
                     location: $menu->location,
                     title: $menu->title,
-                    items: $menu->menuItems,
+                    items: $menu->menuItems ?? [],
                     activated: $menu->activated,
                 );
-            }) ?? []
+            })->toArray(),
         ];
     }
 }
