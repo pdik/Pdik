@@ -31,7 +31,6 @@ class ProjectResource extends Resource
     {
         return $form
             ->schema([
-
                     Section::make('Project Information')
                         ->description('Basic information about the project')
                         ->schema([
