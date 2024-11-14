@@ -32,6 +32,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->plugins(
                 [
+                    \Filament\SpatieLaravelTranslatablePlugin::make()->defaultLocales(['en', 'nl']),
                     \TomatoPHP\FilamentCms\FilamentCMSPlugin::make()
                         ->defaultLocales(['en', 'nl'])
                         ->useCategory()
@@ -40,8 +41,6 @@ class AdminPanelProvider extends PanelProvider
                         ->allowImport()
                         ->useThemeManager()
                         ->usePageBuilder(),
-
-                    \Filament\SpatieLaravelTranslatablePlugin::make()->defaultLocales(['en', 'nl']),
                     \TomatoPHP\FilamentMenus\FilamentMenusPlugin::make(),
                     \TomatoPHP\FilamentSeo\FilamentSeoPlugin::make()
                         ->allowAutoPostsIndexing()
@@ -62,6 +61,13 @@ class AdminPanelProvider extends PanelProvider
             ->widgets([
                 Widgets\AccountWidget::class,
                 Widgets\FilamentInfoWidget::class,
+            ])
+            ->unsavedChangesAlerts()
+            ->brandLogo(fn () => view('filament.app.logo'))
+            ->brandLogoHeight('1.25rem')
+            ->navigationGroups([
+                'Shop',
+                'Blog',
             ])
             ->middleware([
                 EncryptCookies::class,

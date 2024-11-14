@@ -5,10 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Activitylog\LogOptions;
+use Spatie\Activitylog\Traits\LogsActivity;
 use Spatie\Tags\HasTags;
 
 class Project extends Model
 {
+    use LogsActivity;
     use HasFactory;
     use HasTags;
 
@@ -27,7 +30,11 @@ class Project extends Model
         'icon',
     ];
 
-
+    public function getActivitylogOptions(): LogOptions
+    {
+        return LogOptions::defaults()
+            ->logOnly(['completed_at', 'started_at','name','description']);
+    }
     protected $casts = [
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
